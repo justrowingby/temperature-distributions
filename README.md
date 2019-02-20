@@ -36,3 +36,36 @@ We'll assume the plate to be a unit square, and take the temperature on the left
 The discrete mean value property can be applied to an imaginary grid laid across our plate such that the temperature at each point on the grid will be the average of the four nearest points, such that
 
 <img src="figures/f_pxy_equals.png" height="36" alt="f(P(x,y)) = 1/4 ( f(P(x+1,y)) + f(P(x-1,y)) + f(P(x,y+1)) + f(P(x-1,y-1)) )">
+
+### A 2x2 Matrix
+The previous function leads to the set of linear equations for a four-point grid, numbered left-right top-bottom, to be
+
+<img src="figures/t1_lin_sys.png" height="24" alt="t<sub>1</sub>= (1/4) (t<sub>2</sub> + t<sub>3</sub> + 0 + 0)" title="">
+
+<img src="figures/t2_lin_sys.png" height="24" alt="t<sub>2</sub>= (1/4) (t<sub>1</sub> + t<sub>4</sub> + 1 + 1)" title="">
+
+<img src="figures/t3_lin_sys.png" height="24" alt="t<sub>3</sub>= (1/4) (t<sub>1</sub> + t<sub>4</sub> + 0 + 0)" title="">
+
+<img src="figures/t4_lin_sys.png" height="24" alt="t<sub>4</sub>= (1/4) (t<sub>2</sub> + t<sub>3</sub> + 1 + 1)" title="">
+
+this is equivalent to
+
+<img src="figures/t_exp_lin_sys.png" height="72" alt="t=Mt+b expanded" title="">
+
+or simply
+
+<img src="figures/t_smol_lin_sys.png" height="30" alt="t=Mt+b expanded" title="">
+
+solving for t, this leaves
+
+<img src="figures/t_I-M_-1.png" height="30" alt="t=(I-M)<sup>-1</sup> b" title="">
+
+
+If you choose to calculate this out by hand (I used Guass-Jordan elimination), you'll find
+
+<img src="figures/I-M_inv_eq.png" height="72" alt="what (I-M)<sup>-1</sup> equals" title="">
+
+which determines the temperature approximations at our four points to be t<sub>1</sub>=t<sub>3</sub>=0.25 and t<sub>2</sub>=t<sub>4</sub>=0.75.
+
+Ask your friendly neighborhood physics PhD and they could tell you that the exact temperatures in reality are t<sub>1</sub>=t<sub>3</sub>=0.2371 and t<sub>2</sub>=t<sub>4</sub>=0.7629. That means that with only 4 grid points, our margin of error from the real temperatures was only about 5%.
+And if we increase the number of grid points, our approximations will only get better.
