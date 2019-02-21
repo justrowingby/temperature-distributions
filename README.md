@@ -90,4 +90,5 @@ This is now in a form that can easily be looped over with numpy:
 t = numpy.matmul(M, t) + b
 ```
 
-Try this on our 2x2 matrix with an initial t^0 = <0,0,0,0>, and after just <a href="figures/5_iter.png" >5 iterations</a> we have the values t<sub>1</sub>=t<sub>3</sub>=0.2344 and t<sub>2</sub>=t<sub>4</sub>=0.7344, which are already great approximations of the t vector we found earlier for the 2x2 grid.
+Try this on our 2x2 matrix with an initial t<sup>0</sup> set to the 0 vector
+and after just <a href="figures/5_iter.png" >5 iterations</a> we have the values t<sub>1</sub>=t<sub>3</sub>=0.2344 and t<sub>2</sub>=t<sub>4</sub>=0.7344, which are already great approximations of the t vector we found earlier for the 2x2 grid.
