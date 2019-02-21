@@ -92,3 +92,8 @@ t = numpy.matmul(M, t) + b
 
 Try this on our 2x2 matrix with an initial t<sup>0</sup> set to the 0 vector
 and after just <a href="figures/5_iter.png" >5 iterations</a> we have the values t<sub>1</sub>=t<sub>3</sub>=0.2344 and t<sub>2</sub>=t<sub>4</sub>=0.7344, which are already great approximations of the t vector we found earlier for the 2x2 grid.
+
+### Boundary Discontinuity on the 3x3 Matrix
+The 3x3 grid introduces one new problem to deal with: the value on the boundary exactly halfway across the plate in the x direction.
+The boundary function I've described so far is as follows: f(x,y) = (x<0.5 : 0, x>0.5 : 1)
+This leaves two holes on the boundary function: at (0.5, 0) and (0.5,1). You could choose to set this to 0°C or 1°C, but I wanted to minimize the differences between oddly and evenly numbered matrices, so I chose to set it midway, at 0.125°C. I then selfishly truncated that to 0.12 to make the matrices line up nicely in the terminal when numpy prints the ndarray.
