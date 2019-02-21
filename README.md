@@ -69,3 +69,25 @@ which determines the temperature approximations at our four points to be t<sub>1
 
 Ask your friendly neighborhood physics PhD and they could tell you that the exact temperatures in reality are t<sub>1</sub>=t<sub>3</sub>=0.2371 and t<sub>2</sub>=t<sub>4</sub>=0.7629. That means that with only 4 grid points, our margin of error from the real temperatures was only about 5%.
 And if we increase the number of grid points, our approximations will only get better.
+
+### The need for automation
+Perhaps you, like me, just absolutely refuse to do the Gauss-Jordan elimination process by hand on anything more complex than the previous 2x2 matrix.
+Thankfully, [Jacobi's method](https://www.maa.org/press/periodicals/loci/joma/iterative-methods-for-solving-iaxi-ibi-jacobis-method "Mathematical Association of America - Iterative Methods for Solving Ax = b - Jacobi's Method") exists.
+Jacobi's method is an iterative method for finding x when Ax=b, and A is a diagonally dominant matrix, where the approximation as the iteration number increases converges on the true solution.
+Jacobi's method can be expressed as
+
+<img src="https://www.maa.org/sites/default/files/images/cms_upload/JacobisMethod435220.gif" height="30" alt="x^k+1 = D^-1 ((-L-U) x^k + b)" title="Jacobi's method">
+
+Where D is the matrix with only the diagonal component of A, L and U are the lower and upper triangular portions of A, and the superscript of x is the iteration number, not a power operator.
+
+Our original matrix equation is actually very similar: where D is the identity matrix, M can step in for (-L-U), and I+M would be a diagonally dominant matrix. Therefore, to avoid giving the computer any further work, we can simply use our original equation modified only so that the lefthand side simply being the next iteration:
+
+<img src="figures/t_k+1.png" height="30" alt="t^k+1 = Mt^k + b" title="">
+
+This is now in a form that can easily be looped over with numpy:
+
+```python
+t = numpy.matmul(M, t) + b
+```
+
+Try this on our 2x2 matrix with an initial t^0 = <0,0,0,0>, and after just <a href="figures/5_iter.png" >5 iterations</a> we have the values t<sub>1</sub>=t<sub>3</sub>=0.2344 and t<sub>2</sub>=t<sub>4</sub>=0.7344, which are already great approximations of the t vector we found earlier for the 2x2 grid.
