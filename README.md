@@ -96,4 +96,4 @@ and after just <a href="figures/5_iter.png" >5 iterations</a> we have the values
 ### Boundary Discontinuity on the 3x3 Matrix
 The 3x3 grid introduces one new problem to deal with: the value on the boundary exactly halfway across the plate in the x direction.
 The boundary function I've described so far is as follows: f(x,y) = (x<0.5 : 0, x>0.5 : 1)
-This leaves two holes on the boundary function: at (0.5, 0) and (0.5,1). You could choose to set this to 0°C or 1°C, but I wanted to minimize the differences between oddly and evenly numbered matrices, so I chose to set it midway, at 0.125°C. I then selfishly truncated that to 0.12 to make the matrices line up nicely in the terminal when numpy prints the ndarray.
+This leaves two holes on the boundary function: at (0.5, 0) and (0.5,1). You could choose to set this to 0°C or 1°C, but I wanted to minimize the differences between oddly and evenly numbered matrices, so I chose to set it midway, at 0.125°C.
