@@ -76,13 +76,13 @@ Thankfully, [Jacobi's method](https://www.maa.org/press/periodicals/loci/joma/it
 Jacobi's method is an iterative method for finding x when Ax=b, and A is a diagonally dominant matrix, where the approximation as the iteration number increases converges on the true solution.
 Jacobi's method can be expressed as
 
-<img src="https://www.maa.org/sites/default/files/images/cms_upload/JacobisMethod435220.gif" height="30" alt="x^k+1 = D^-1 ((-L-U) x^k + b)" title="Jacobi's method">
+<img src="https://www.maa.org/sites/default/files/images/cms_upload/JacobisMethod435220.gif" height="27" alt="x^k+1 = D^-1 ((-L-U) x^k + b)" title="Jacobi's method">
 
 Where D is the matrix with only the diagonal component of A, L and U are the lower and upper triangular portions of A, and the superscript of x is the iteration number, not a power operator.
 
 Our original matrix equation is actually very similar: where D is the identity matrix, M can step in for (-L-U), and I+M would be a diagonally dominant matrix. Therefore, to avoid giving the computer any further work, we can simply use our original equation modified only so that the lefthand side simply being the next iteration:
 
-<img src="figures/t_k+1.png" height="30" alt="t^k+1 = Mt^k + b" title="">
+<img src="figures/t_k+1.png" height="27" alt="t^k+1 = Mt^k + b" title="">
 
 This is now in a form that can easily be looped over with numpy:
 
