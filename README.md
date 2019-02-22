@@ -50,20 +50,20 @@ The previous function leads to the set of linear equations for a four-point grid
 
 this is equivalent to
 
-<img src="figures/t_exp_lin_sys.png" height="72" alt="t=Mt+b expanded" title="">
+<img src="figures/t_exp_lin_sys.png" height="108" alt="t=Mt+b expanded" title="">
 
 or simply
 
-<img src="figures/t_smol_lin_sys.png" height="30" alt="t=Mt+b expanded" title="">
+<img src="figures/t_smol_lin_sys.png" height="27" alt="t=Mt+b expanded" title="">
 
 solving for t, this leaves
 
-<img src="figures/t_I-M_-1.png" height="30" alt="t=(I-M)<sup>-1</sup> b" title="">
+<img src="figures/t_I-M_-1.png" height="27" alt="t=(I-M)<sup>-1</sup> b" title="">
 
 
 If you choose to calculate this out by hand (I used Guass-Jordan elimination), you'll find
 
-<img src="figures/I-M_inv_eq.png" height="72" alt="what (I-M)<sup>-1</sup> equals" title="">
+<img src="figures/I-M_inv_eq.png" height="108" alt="what (I-M)<sup>-1</sup> equals" title="">
 
 which determines the temperature approximations at our four points to be t<sub>1</sub>=t<sub>3</sub>=0.25 and t<sub>2</sub>=t<sub>4</sub>=0.75.
 
