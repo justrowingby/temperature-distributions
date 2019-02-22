@@ -98,4 +98,4 @@ The 3x3 grid introduces one new problem to deal with: the value on the boundary 
 The boundary function I've described so far is as follows: f(x,y) = (x<0.5 : 0, x>0.5 : 1)
 This leaves two holes on the boundary function: at (0.5, 0) and (0.5,1). You could choose to set this to 0°C or 1°C, but I wanted to minimize the differences between oddly and evenly numbered matrices, so I chose to set it midway, at 0.125°C.
 
-Before calculating the values for t on a 3x3 grid, it's worth taking a guess at what the temperature might be at the center of the plate. I arrived at [this set of t values after 20 iterations]("examples/images/3x3_first_twenty_iter.png"). The central value is very close to what my intuition, (and knowledge of calculus) tells me it ought to be, which is nice.
+Before calculating the values for t on a 3x3 grid, it's worth taking a guess at what the temperature might be at the center of the plate. I arrived at [this set of t values after 20 iterations](examples/images/3x3_first_twenty_iter.png). The central value is very close to what my intuition, (and knowledge of calculus) tells me it ought to be, which is nice.
