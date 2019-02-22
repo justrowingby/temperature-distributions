@@ -99,3 +99,9 @@ The boundary function I've described so far is as follows: f(x,y) = (x<0.5 : 0, 
 This leaves two holes on the boundary function: at (0.5, 0) and (0.5,1). You could choose to set this to 0°C or 1°C, but I wanted to minimize the differences between oddly and evenly numbered matrices, so I chose to set it midway, at 0.125°C.
 
 Before calculating the values for t on a 3x3 grid, it's worth taking a guess at what the temperature might be at the center of the plate. I arrived at [this set of t values after 20 iterations](examples/images/3x3_first_twenty_iter.png). The central value is very close to what my intuition, (and knowledge of calculus) tells me it ought to be, which is nice.
+### An nxn Matrix
+
+Now that the temperature function on the boundary is defined across the whole boundary, I can automate the process of creating the M and b matrices.
+After all, why do work that I can make the computer do for me?
+
+At this point, the grid size could be set to any value, so I've made it responsive to user input, so you can decide for yourself how hard you'd like your CPU slaughtered for the sake of accuracy.
