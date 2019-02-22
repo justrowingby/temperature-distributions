@@ -40,13 +40,13 @@ The discrete mean value property can be applied to an imaginary grid laid across
 ### A 2x2 Matrix
 The previous function leads to the set of linear equations for a four-point grid, numbered left-right top-bottom, to be
 
-<img src="figures/t1_lin_sys.png" height="24" alt="t<sub>1</sub>= (1/4) (t<sub>2</sub> + t<sub>3</sub> + 0 + 0)" title="">
+<img src="figures/t1_lin_sys.png" height="36" alt="t<sub>1</sub>= (1/4) (t<sub>2</sub> + t<sub>3</sub> + 0 + 0)" title="">
 
-<img src="figures/t2_lin_sys.png" height="24" alt="t<sub>2</sub>= (1/4) (t<sub>1</sub> + t<sub>4</sub> + 1 + 1)" title="">
+<img src="figures/t2_lin_sys.png" height="36" alt="t<sub>2</sub>= (1/4) (t<sub>1</sub> + t<sub>4</sub> + 1 + 1)" title="">
 
-<img src="figures/t3_lin_sys.png" height="24" alt="t<sub>3</sub>= (1/4) (t<sub>1</sub> + t<sub>4</sub> + 0 + 0)" title="">
+<img src="figures/t3_lin_sys.png" height="36" alt="t<sub>3</sub>= (1/4) (t<sub>1</sub> + t<sub>4</sub> + 0 + 0)" title="">
 
-<img src="figures/t4_lin_sys.png" height="24" alt="t<sub>4</sub>= (1/4) (t<sub>2</sub> + t<sub>3</sub> + 1 + 1)" title="">
+<img src="figures/t4_lin_sys.png" height="36" alt="t<sub>4</sub>= (1/4) (t<sub>2</sub> + t<sub>3</sub> + 1 + 1)" title="">
 
 this is equivalent to
 
