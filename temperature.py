@@ -21,6 +21,9 @@ m = np.zeros([sq, sq])
 t = np.zeros([sq])
 b = np.zeros([sq])
 
+## create matrix for data visualization
+f = np.zeros([grid, grid])
+
 ## fill m, the transformation matrix
 ## each row gets 0.25 at each column that represents a bordering grid point
 for i in range(sq):
@@ -52,3 +55,10 @@ if grid%2 == 1:
 for i in range(int(grid**3)):
     t = np.matmul(m,t) + b
 
+## fill the 2d temp array to prep for image display
+for i in range(sq):
+    f[int(i/grid)][i%grid] = t[i]
+
+## display cool-warm plot of the temperature distribution with 0°C minimum value and 1°C maximum value
+img = plt.imshow(f, "coolwarm", vmin=0, vmax=1)
+plt.show()
